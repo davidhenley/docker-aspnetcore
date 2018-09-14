@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  development.api:
+    build: .
+    ports:
+      - '5000:80'
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+  production.api:
+    build: .
+    ports:
+      - '5001:80'
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
